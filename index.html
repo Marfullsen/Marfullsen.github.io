@@ -4,23 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marfullsen was here!</title>
+    <style>
+
+        body, div, h1 { margin:0; padding:0 }
+
+        .wrapper {
+            min-height: 100vh;
+        }
+
+        .sticky {
+            position: sticky;
+        }
+
+        /*
+        -----
+        DEBUG CSS LAYOUT
+        -----
+
+        * {
+         outline: 1px solid red;
+        }
+
+        */
+
+        .navbar {
+        background-color: #333;
+        }
+
+        header {
+            background-image: url("https://images.unsplash.com/photo-1542272201-b1ca555f8505");
+            background-size:cover;
+        }
+
+        --header {
+            --s: 180px; /* control the size */
+            --color-1: #222;
+            /* #544929; */
+            --color-2: #e0a500;
+            /* #ffbf00; */
+
+            background:
+                linear-gradient(135deg,#0000 18.75%, var(--color-1) 0 31.25%,#0000 0),
+                repeating-linear-gradient(45deg,var(--color-1) -6.25% 6.25%, var(--color-2) 0 18.75%);
+            background-size: var(--s) var(--s);
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .margin-15px {
+            margin: 15px;
+        }
+        .padding-25px {
+            padding: 25px;
+        }
+
+        .container {
+  width: 20rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+}
+
+.review {
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.transparent-color-bg {
+  background-color: #ffffffa1;
+}
+
+.round-borders {
+  border-radius: 12px;
+}
+
+.close-min-max-btns {
+  margin-right: 10px;
+  font-size: small;
+}
+
+.text-green {
+  color: #27C93F;
+  color: #00FF00;
+}
+
+.text-yellow {
+  color: #FFBD2E;
+  color: #e6e600;
+}
+
+.text-red {
+  color: #FF5F56;
+  color: #db2f2f;
+}
+
+.hidden {
+    display: none;
+}
+
+#catquote {
+    color: white;
+}
+
+    </style>
 </head>
 <body>
     <header>
-        <nav>Navbar</nav>
-        <section>
-            <h1>Marfullsen</h1>
-            <p>Software Developer</p>
+        <!-- <nav class="navbar sticky">Navbar</nav> -->
+        <section class="wrapper flex-center">
+            <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
+            <section class="container">
+                <article class="top-bar">
+                  <span>
+                    &nbsp;
+                    <img src="https://github.com/Marfullsen/modal-with-aero-effect/blob/master/bloc-icon.png?raw=true" alt="bloc-icon" width="12" height="12">
+                    &nbsp; new_document.txt
+                  </span>&nbsp;
+                  <span class="close-min-max-btns">
+                    <i onclick="document.getElementsByClassName('container')[0].style.display = 'none'; catquote.style.display = 'block'">
+                        <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="5" cx="5" cy="5" fill="aquamarine" />
+                      </svg>
+                    </i>
+                    <i onclick="document.getElementsByClassName('container')[0].style.display = 'none'; catquote.style.display = 'block'"
+                    class="fa fa-circle text-yellow" aria-hidden="true">
+                        <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg">
+                            <circle r="5" cx="5" cy="5" fill="teal" />
+                        </svg>
+                    </i>
+                    <i onclick="document.getElementsByClassName('container')[0].style.display = 'none'; catquote.style.display = 'block'"
+                    class="fa fa-circle text-green" aria-hidden="true">
+                        <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg">
+                            <circle r="5" cx="5" cy="5" fill="aqua" />
+                        </svg>
+                    </i>
+                    </span>
+                </article>
+                <article class="transparent-color-bg round-borders margin-15px padding-25px">
+                    <div class="flex-center flex-col">
+                        <div class="flex">
+                            <h1>Marfullsen</h1>
+                            <p>Software Developer</p>
+                        </div>
+                        <br>
+                        <div>
+                            <button>About me</button>
+                            <button>Projects</button>
+                            <button>Conctact</button>
+                        </div>
+                    </div>
+                </article>
+              </section>
         </section>
     </header>
     <main>
-        <section>
+        <section class="wrapper">
             <h1>Projects</h1>
+            <article>
+                <h3>Project 001</h3>
+                <p>blablabla</p>
+            </article>
         </section>
-        <article>
-            <h3>Project 001</h3>
-            <p>blablabla</p>
-        </article>
+        <section class="wrapper">
+            <h1>Testimonials</h1>
+            <article>
+                <h3>Spike</h3>
+                <p>guauguau</p>
+            </article>
+        </section>
+        <section class="wrapper">
+            <h2>Contact now!</h2>
+            <p>Linkedin, Email, X</p>
+        </section>
     </main>
     <footer>
         <section>
