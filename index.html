@@ -4,143 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marfullsen was here!</title>
-    <style>
-
-        body, div, h1 { margin:0; padding:0 }
-
-        .wrapper {
-            min-height: 100vh;
-        }
-
-        .sticky {
-            position: sticky;
-        }
-
-        /*
-        -----
-        DEBUG CSS LAYOUT
-        -----
-
-        * {
-         outline: 1px solid red;
-        }
-
-        */
-
-        .navbar {
-        background-color: #333;
-        }
-
-        header {
-            background-image: url("https://images.unsplash.com/photo-1542272201-b1ca555f8505");
-            background-size:cover;
-        }
-
-        --header {
-            --s: 180px; /* control the size */
-            --color-1: #222;
-            /* #544929; */
-            --color-2: #e0a500;
-            /* #ffbf00; */
-
-            background:
-                linear-gradient(135deg,#0000 18.75%, var(--color-1) 0 31.25%,#0000 0),
-                repeating-linear-gradient(45deg,var(--color-1) -6.25% 6.25%, var(--color-2) 0 18.75%);
-            background-size: var(--s) var(--s);
-        }
-
-        .flex {
-            display: flex;
-        }
-
-        .flex-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flex-col {
-            flex-direction: column;
-        }
-
-        .margin-15px {
-            margin: 15px;
-        }
-        .padding-25px {
-            padding: 25px;
-        }
-
-        .container {
-  width: 20rem;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-  border-radius: 7px;
-  background-color: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(5px);
-  padding: 10px;
-}
-
-.review {
-  margin: 0;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  padding: 5px;
-}
-
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 10px;
-}
-
-.transparent-color-bg {
-  background-color: #ffffffa1;
-}
-
-.round-borders {
-  border-radius: 12px;
-}
-
-.close-min-max-btns {
-  margin-right: 10px;
-  font-size: small;
-}
-
-.text-green {
-  color: #27C93F;
-  color: #00FF00;
-}
-
-.text-yellow {
-  color: #FFBD2E;
-  color: #e6e600;
-}
-
-.text-red {
-  color: #FF5F56;
-  color: #db2f2f;
-}
-
-.hidden {
-    display: none;
-}
-
-#catquote {
-    color: white;
-}
-
-    </style>
+    <!--Import Google Icon Font-->
+    <link href="assets\css\use_material_icons_font.css" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <header>
         <!-- <nav class="navbar sticky">Navbar</nav> -->
         <section class="wrapper flex-center">
             <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
-            <section class="container">
+            <section class="windowslike">
                 <article class="top-bar">
                   <span>
                     &nbsp;
-                    <img src="https://github.com/Marfullsen/modal-with-aero-effect/blob/master/bloc-icon.png?raw=true" alt="bloc-icon" width="12" height="12">
+                    <img src="assets\img\bloc-icon.png" alt="bloc-icon" width="12" height="12">
                     &nbsp; new_document.txt
                   </span>&nbsp;
                   <span class="close-min-max-btns">
@@ -171,9 +51,9 @@
                         </div>
                         <br>
                         <div>
-                            <button>About me</button>
-                            <button>Projects</button>
-                            <button>Conctact</button>
+                            <a class="waves-effect waves-light btn-small teal"><i class="material-icons left">whatshot</i>About Me</a>
+                            <a class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects<i class="material-icons right">work</i></a>
+                            <a class="waves-effect waves-light btn-small teal"><i class="material-icons right">phone</i>Contact</a>
                         </div>
                     </div>
                 </article>
@@ -206,5 +86,6 @@
             <p>marfullsen@gmail.com</p>
         </section>
     </footer>
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
 </body>
 </html>
