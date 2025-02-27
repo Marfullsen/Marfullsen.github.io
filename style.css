@@ -1,3 +1,7 @@
+/* 
+* {
+    outline: 1px solid red;
+} */
 
 body, div, h1 { margin:0; padding:0 }
 
@@ -8,17 +12,6 @@ body, div, h1 { margin:0; padding:0 }
 .sticky {
     position: sticky;
 }
-
-/*
------
-DEBUG CSS LAYOUT
------
-
-* {
- outline: 1px solid red;
-}
-
-*/
 
 .rounded-badge {
     border-radius: 99px;
@@ -72,7 +65,7 @@ background-color: #333;
     background-size:cover;
 }
 
-header {
+.rectangles-pattern {
     --s: 180px; /* control the size */
     --color-1: #222;
     /* #544929; */

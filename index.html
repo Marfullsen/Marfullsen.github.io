@@ -14,12 +14,25 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="montserrat-regular">
-    <header class="darkBg">
+  <header class="">
+    <nav class="teal">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">About Me</a></li>
+          <li><a href="badges.html">Projects</a></li>
+          <li><a href="collapsible.html">Contact me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="darkBg">
         <section class="wrapper flex-center container">
             <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
             <section class="windowslike">
                 <article class="top-bar">
-                  <span>
+                  <span ondblclick="toggleDebugOutline()">
                     &nbsp;
                     <img src="assets\img\bloc-icon.png" alt="bloc-icon" width="12" height="12">
                     &nbsp; new_document.txt
@@ -60,11 +73,10 @@
                 </article>
               </section>
         </section>
-    </header>
-    <main>
+    </section>
       <section class="wrapper darkBg">
-          <h1 class="center-align transparent-color-bg padding-25px">Recent Projects</h1>
-        <div class="container margin-top-1">
+        <div class="container">
+          <h1 class="center-align transparent-color-bg">Recent Projects</h1>
             <section class="row margin-bottom-0">
                 <div class="col s12 m4 margin-top-1">
                   <div class="icon-block windowslike">
@@ -109,7 +121,7 @@
               </section>
         </div>
       </section>
-        <section class="wrapper teal">
+        <section class="wrapper darkBg">
             <h1>Notable Projects</h1>
             <article>
                 <h3>Project 001</h3>
@@ -123,37 +135,55 @@
                   </div>
             </article>
         </section>
-        <section class="wrapper">
+        <section class="wrapper darkBg">
             <h2>Contact now!</h2>
             <p>Linkedin, Email, X</p>
         </section>
-    </main>
-    <footer class="page-footer teal accent-4">
+  </main>
+  <footer class="page-footer teal accent-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Referencias</h5>
+            <p class="grey-text text-lighten-4">Foto de <a href="https://unsplash.com/es/@vmxhu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Szabo Viktor</a> en <a href="https://unsplash.com/es/fotos/mar-blanco-de-nubes-28ZbKOWiZfs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
+            <p class="grey-text text-lighten-4">Hecho por Marfullsen con Materialize CSS.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Encuéntrame en:</h5>
+            <ul>  
+              <li><a class="grey-text text-lighten-3" href="#!">@Marfullsen</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">marfullsen@gmail.com</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">francisco-marfull</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Marfullsen</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
         <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Referencias</h5>
-              <p class="grey-text text-lighten-4">Foto de <a href="https://unsplash.com/es/@vmxhu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Szabo Viktor</a> en <a href="https://unsplash.com/es/fotos/mar-blanco-de-nubes-28ZbKOWiZfs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
-              <p class="grey-text text-lighten-4">Hecho por Marfullsen con Materialize CSS.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Encuéntrame en:</h5>
-              <ul>  
-                <li><a class="grey-text text-lighten-3" href="#!">@Marfullsen</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">marfullsen@gmail.com</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">francisco-marfull</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Marfullsen</a></li>
-              </ul>
-            </div>
-          </div>
+        © 2025 Copyright  | @Marfullsen
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-          © 2025 Copyright  | @Marfullsen
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
-        </div>
-      </footer>
+      </div>
+    </footer>
+    <script>
+      let mode = 'normal';
+      function toggleDebugOutline() {
+        console.log(mode)
+        const allElements = document.querySelectorAll('*');
+        if (mode == 'normal') {
+          mode = 'outlined';
+          allElements.forEach(function(element) {
+            element.style.outline = '1px solid red';
+          });
+        } else {
+          mode = 'normal';
+          allElements.forEach(function(element) {
+              element.style.outline = '';
+          });
+        }
+      }
+  </script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
