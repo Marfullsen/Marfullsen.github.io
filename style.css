@@ -20,6 +20,25 @@ DEBUG CSS LAYOUT
 
 */
 
+.rounded-badge {
+    border-radius: 99px;
+    padding: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #93c5fd;
+    background-color: #1e3a8a;
+}
+
+.purple-badge {
+    color: #b8c4ff;
+    background-color: #312e81;
+}
+
+.green-badge {
+    color: #6ee7b7;
+    background-color: #064e3b;
+}
+
 .architects-daughter-regular {
     font-family: "Architects Daughter", cursive;
     font-weight: 400;
@@ -83,6 +102,15 @@ header {
 .margin-15px {
     margin: 15px;
 }
+
+.margin-top-1 {
+    margin-top: 15px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
 .padding-25px {
     padding: 25px;
 }
