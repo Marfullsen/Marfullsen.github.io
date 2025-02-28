@@ -15,46 +15,26 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="montserrat-regular">
-  <header class="">
-    <nav class="teal">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">About Me</a></li>
-          <li><a href="badges.html">Projects</a></li>
-          <li><a href="collapsible.html">Contact me</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
   <main>
     <section class="darkBg">
       <section class="wrapper flex-center container">
           <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
           <section class="windowslike">
               <article class="top-bar">
-                <span ondblclick="toggleDebugOutline()">
+                <span class="flex-center" ondblclick="toggleDebugOutline()">
                   &nbsp;
-                  <img src="assets\img\bloc-icon.png" alt="bloc-icon" width="12" height="12">
+                  <img src="assets\img\bloc-icon.png" alt="bloc-icon" width="17" height="17">
                   &nbsp; new_document.txt
                 </span>&nbsp;
                 <span class="close-min-max-btns">
                   <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
-                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg">
-                      <circle r="5" cx="5" cy="5" fill="aquamarine" />
-                    </svg>
+                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="aquamarine" /></svg>
                   </i>
-                  <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'"
-                  class="fa fa-circle text-yellow" aria-hidden="true">
-                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg">
-                          <circle r="5" cx="5" cy="5" fill="teal" />
-                      </svg>
+                  <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
+                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="teal" /></svg>
                   </i>
-                  <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'"
-                  class="fa fa-circle text-green" aria-hidden="true">
-                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg">
-                          <circle r="5" cx="5" cy="5" fill="aqua" />
-                      </svg>
+                  <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
+                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="aqua" /></svg>
                   </i>
                   </span>
               </article>
@@ -133,42 +113,20 @@
         </div>
       </section>
       <section class="wrapper darkBg flex-center">
-        <legend>
-          <h1 class="center-align transparent-color-bg">Hit me up</h1>
-          <div >
-            <a class="btn-floating pulse"><i class="fa fa-fw fa-github"></i></a>
-            <a class="btn-floating pulse"><i class="fa fa-fw fa-linkedin"></i></a>
-            <a class="btn-floating pulse"><i class="fa fa-fw fa-envelope"></i></a>
+        <fieldset>
+          <legend><h1 class="center-align transparent-color-bg">Let’s network!</h1></legend>
+          <div class="center-evenly padding-contact">
+            <a href="https://www.linkedin.com/in/francisco-marfull/" class="btn-floating pulse tooltipped" data-position="bottom" data-tooltip="francisco-marfull">
+              <i class="fa fa-fw fa-linkedin"></i></a>
+            <a href="mailto:marfullsen@gmail.com?Subject=Ready%20to%20Network"
+              class="btn-floating pulse tooltipped" data-position="top" data-tooltip="marfullsen@gmail.com">
+              <i class="fa fa-fw fa-envelope"></i></a>
+            <a href="" class="btn-floating pulse tooltipped" data-position="bottom" data-tooltip="@Marfullsen">
+              <i class="fa fa-fw fa-github"></i></a>
           </div>
-        </legend>
+        </fieldset>
       </section>
   </main>
-  <footer class="page-footer teal accent-4">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Referencias</h5>
-            <p class="grey-text text-lighten-4">Foto de <a href="https://unsplash.com/es/@vmxhu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Szabo Viktor</a> en <a href="https://unsplash.com/es/fotos/mar-blanco-de-nubes-28ZbKOWiZfs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
-            <p class="grey-text text-lighten-4">Hecho por Marfullsen con Materialize CSS.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Encuéntrame en:</h5>
-            <ul>  
-              <li><a class="grey-text text-lighten-3" href="#!">@Marfullsen</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">marfullsen@gmail.com</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">francisco-marfull</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Marfullsen</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-        © 2025 Copyright  | @Marfullsen
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
-      </div>
-    </footer>
     <script>
       let mode = 'normal';
       function toggleDebugOutline() {
