@@ -118,6 +118,11 @@ background-color: #333;
     padding: 25px;
 }
 
+.border-radius-7px {
+    border-radius: 7px;
+}
+
+
 .windowslike {
 /* width: 20rem; */
 box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);

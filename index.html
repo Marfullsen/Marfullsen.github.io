@@ -18,43 +18,71 @@
   <main>
     <section class="darkBg">
       <section class="wrapper flex-center container">
-          <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
-          <section class="windowslike">
-              <article class="top-bar">
-                <span class="flex-center" ondblclick="toggleDebugOutline()">
-                  &nbsp;
-                  <img src="assets\img\bloc-icon.png" alt="bloc-icon" width="17" height="17">
-                  &nbsp; new_document.txt
-                </span>&nbsp;
-                <span class="close-min-max-btns">
-                  <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
-                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="aquamarine" /></svg>
-                  </i>
-                  <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
-                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="teal" /></svg>
-                  </i>
-                  <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
-                      <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="aqua" /></svg>
-                  </i>
-                  </span>
-              </article>
-              <article class="transparent-color-bg round-borders margin-15px padding-25px">
-                  <div class="flex-center flex-col">
-                      <div class="flex">
-                          <h3>Marfullsen</h3>
-                          <p class="flow-text">&nbsp;Software Developer</p>
-                      </div>
-                      <br>
-                      <div class="row">
-                          <a class="waves-effect waves-light btn-small teal"><i class="material-icons left">whatshot</i>About Me</a>
-                          <a class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects<i class="material-icons right">work</i></a>
-                          <a class="waves-effect waves-light btn-small teal"><i class="material-icons right">phone</i>Contact</a>
-                      </div>
-                  </div>
-              </article>
-            </section>
+        <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
+        <section class="windowslike">
+            <article class="top-bar">
+              <span class="flex-center" ondblclick="toggleDebugOutline()">
+                &nbsp;
+                <img src="assets\img\bloc-icon.png" alt="bloc-icon" width="17" height="17">
+                &nbsp; new_document.txt
+              </span>&nbsp;
+              <span class="close-min-max-btns">
+                <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
+                    <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="aquamarine" /></svg>
+                </i>
+                <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
+                    <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="teal" /></svg>
+                </i>
+                <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
+                    <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="aqua" /></svg>
+                </i>
+                </span>
+            </article>
+            <article class="transparent-color-bg round-borders margin-15px padding-25px">
+                <div class="flex-center flex-col">
+                    <div class="flex">
+                        <h3>Marfullsen</h3>
+                        <p class="flow-text">&nbsp;Software Developer</p>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <a class="waves-effect waves-light btn-small teal modal-trigger" href="#modal1"><i class="material-icons left">whatshot</i>About Me</a>
+                        <a class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects<i class="material-icons right">work</i></a>
+                        <a class="waves-effect waves-light btn-small teal"><i class="material-icons right">phone</i>Contact</a>
+                    </div>
+                </div>
+            </article>
+          </section>
       </section>
     </section>
+    <!-- Modal About Me -->
+    <section id="modal1" class="modal teal border-radius-7px">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <img src="assets/img/bloc-icon.png" alt="" width="50" class="circle responsive-img">
+        <h4>@Marfullsen</h4>
+        <p>Innovation starts with a single idea. As a software developer, I turn those ideas into functional, beautiful, and impactful digital experiences. Let’s connect and create something extraordinary!</p>
+      </div>
+      <article class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/bloc-icon.png" alt="" class="circle responsive-img">
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                I’m a developer who believes in making technology accessible and enjoyable. Let’s work together to create something outstanding.
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- Modal Footer -->
+      <div class="modal-footer center">
+        <a class="modal-close waves-effect waves-green btn-flat">Got It!</a>
+      </div>
+    </section>
+    <!-- End Modal -->
     <section class="wrapper darkBg">
       <h1 class="center-align transparent-color-bg">Notable Projects</h1>
         <article>
@@ -130,7 +158,6 @@
     <script>
       let mode = 'normal';
       function toggleDebugOutline() {
-        console.log(mode)
         const allElements = document.querySelectorAll('*');
         if (mode == 'normal') {
           mode = 'outlined';
