@@ -48,7 +48,8 @@
                     <div class="row">
                         <a class="waves-effect waves-light btn-small teal modal-trigger" href="#modal1"><i class="material-icons left">whatshot</i>About Me</a>
                         <a class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects<i class="material-icons right">work</i></a>
-                        <a class="waves-effect waves-light btn-small teal"><i class="material-icons right">phone</i>Contact</a>
+                        <a onclick="scrollSmoothlyToId('contact')"
+                        class="waves-effect waves-light btn-small teal"><i class="material-icons right">phone</i>Contact</a>
                     </div>
                 </div>
             </article>
@@ -140,7 +141,7 @@
               </section>
         </div>
       </section>
-      <section class="wrapper darkBg flex-center">
+      <section id="contact" class="wrapper darkBg flex-center">
         <fieldset>
           <legend><h1 class="center-align transparent-color-bg">Let’s network!</h1></legend>
           <div class="center-evenly padding-contact">
@@ -171,6 +172,12 @@
           });
         }
       }
+      function scrollSmoothlyToId(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
   </script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
