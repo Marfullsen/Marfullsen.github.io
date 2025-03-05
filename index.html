@@ -18,11 +18,11 @@
   <main>
     <section class="darkBg">
       <section class="wrapper flex-center container">
-        <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
+        <article onclick="rotar_frase()" id="catquote" class="hidden non-selectable">Curiosity killed the cat, but satisfaction brought it back to life.</article>
         <section id="hero" class="windowslike">
           <!-- Barra superior con ícono, título y botones azules -->
             <article class="top-bar">
-              <span class="flex-center" ondblclick="toggleDebugOutline()">
+              <span class="flex-center non-selectable" ondblclick="toggleDebugOutline()">
                 &nbsp;
                 <img src="assets\img\bloc-icon.png" alt="bloc-icon" width="17" height="17">
                 &nbsp; new_document.txt
@@ -58,11 +58,6 @@
                           <div id="right_button" class="anim-mover">
                             <a onclick="scrollSmoothlyToId('contact')" class="waves-effect waves-light btn-small teal"><i class="material-icons left">phone</i>Contact</a>
                           </div>
-                        </article>
-                        <article class="hide">
-                          <a class="waves-effect waves-light btn-small teal modal-trigger" href="#modal1"><i class="material-icons left">star</i>About Me</a>
-                          <a onclick="scrollSmoothlyToId('projects')" class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects</a>
-                          <a onclick="scrollSmoothlyToId('contact')" class="waves-effect waves-light btn-small teal"><i class="material-icons left">phone</i>Contact</a>
                         </article>
                     </div>
                 </div>
@@ -200,6 +195,12 @@
           left_button.classList.add('move-left');
         }, 1000);
       });
+      let rotationAngle = 0;
+      function rotar_frase() {
+        const catquote = document.getElementById('catquote');
+        rotationAngle += 10;
+        catquote.style.transform = `rotate(${rotationAngle}deg)`;
+      }
       let mode = 'normal';
       function toggleDebugOutline() {
         const allElements = document.querySelectorAll('*');

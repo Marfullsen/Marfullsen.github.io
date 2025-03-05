@@ -110,6 +110,10 @@ background-color: #333;
     width: 100%;
 }
 
+.non-selectable {
+    user-select: none;
+}
+
 .margin-15px {
     margin: 15px;
 }
