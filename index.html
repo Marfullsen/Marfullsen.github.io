@@ -19,7 +19,8 @@
     <section class="darkBg">
       <section class="wrapper flex-center container">
         <section id="catquote" class="hidden">Curiosity killed the cat, but satisfaction brought it back to life.</section>
-        <section class="windowslike">
+        <section id="hero" class="windowslike">
+          <!-- Barra superior con ícono, título y botones azules -->
             <article class="top-bar">
               <span class="flex-center" ondblclick="toggleDebugOutline()">
                 &nbsp;
@@ -27,6 +28,7 @@
                 &nbsp; new_document.txt
               </span>&nbsp;
               <span class="close-min-max-btns">
+                <!-- Botones azules -->
                 <i onclick="document.getElementsByClassName('windowslike')[0].style.display = 'none'; catquote.style.display = 'block'">
                     <svg height="10" width="10" xmlns="http://www.w3.org/2000/svg"><circle r="5" cx="5" cy="5" fill="aquamarine" /></svg>
                 </i>
@@ -45,11 +47,23 @@
                         <p class="flow-text">&nbsp;Software Developer</p>
                     </div>
                     <br>
-                    <div class="row">
-                        <a class="waves-effect waves-light btn-small teal modal-trigger" href="#modal1"><i class="material-icons left">whatshot</i>About Me</a>
-                        <a class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects<i class="material-icons right">work</i></a>
-                        <a onclick="scrollSmoothlyToId('contact')"
-                        class="waves-effect waves-light btn-small teal"><i class="material-icons right">phone</i>Contact</a>
+                    <div id="botonera">
+                        <article class="row show-on-small">
+                          <div id="left_button" class="anim-mover">
+                            <a class=" waves-effect waves-light btn-small teal modal-trigger" href="#modal1"><i class="material-icons left">star</i>About Me</a><br>
+                          </div>
+                          <div class="anim-mover">
+                            <a onclick="scrollSmoothlyToId('projects')" class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects</a><br>
+                          </div>
+                          <div id="right_button" class="anim-mover">
+                            <a onclick="scrollSmoothlyToId('contact')" class="waves-effect waves-light btn-small teal"><i class="material-icons left">phone</i>Contact</a>
+                          </div>
+                        </article>
+                        <article class="hide">
+                          <a class="waves-effect waves-light btn-small teal modal-trigger" href="#modal1"><i class="material-icons left">star</i>About Me</a>
+                          <a onclick="scrollSmoothlyToId('projects')" class="waves-effect waves-light btn-small teal"><i class="material-icons left">work</i>Projects</a>
+                          <a onclick="scrollSmoothlyToId('contact')" class="waves-effect waves-light btn-small teal"><i class="material-icons left">phone</i>Contact</a>
+                        </article>
                     </div>
                 </div>
             </article>
@@ -81,7 +95,7 @@
               <img class="tooltipped" data-position="top" data-tooltip="Pinia" src="assets/img/skills_icons/Pinia-Dark.svg" width="50">
               <img class="tooltipped" data-position="bottom" data-tooltip="HTML" src="assets/img/skills_icons/HTML.svg" width="50">
               <img class="tooltipped" data-position="top" data-tooltip="Git" src="assets/img/skills_icons/Git.svg" width="50">
-              <img class="tooltipped" data-position="bottom" data-tooltip="D" src="assets/img/skills_icons/Django.svg" width="50">
+              <img class="tooltipped" data-position="bottom" data-tooltip="Django" src="assets/img/skills_icons/Django.svg" width="50">
           </div>
           <div>
             <img class="tooltipped" data-position="top" data-tooltip="Arch" src="assets/img/skills_icons/Arch-Dark.svg" width="50">
@@ -103,7 +117,7 @@
       </div>
     </section>
     <!-- End Modal -->
-    <section class="wrapper darkBg">
+    <section id="projects" class="wrapper darkBg">
       <h1 class="center-align transparent-color-bg">Starred Projects</h1>
         <article>
             <div class="carousel">
@@ -176,6 +190,16 @@
       </section>
   </main>
     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hero = document.getElementById('hero');
+        const right_button = document.getElementById('right_button');
+        const left_button = document.getElementById('left_button');
+        hero.classList.add('appear');
+        setTimeout(function() {
+          right_button.classList.add('move-right');
+          left_button.classList.add('move-left');
+        }, 1000);
+      });
       let mode = 'normal';
       function toggleDebugOutline() {
         const allElements = document.querySelectorAll('*');

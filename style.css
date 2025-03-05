@@ -211,6 +211,33 @@ margin: 15px;
     max-width: 500px;
 }
 
+.anim-mover {
+    position: relative;
+    transition: left 1s ease, padding 0.5s ease;
+    left: 0;
+}
+
+.move-right {
+    left: 25px;
+    padding-top: 10px;
+}
+
+.move-left {
+    left: -25px;
+    padding-bottom: 10px;
+}
+
+#hero {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#hero.appear {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Fully scaled */
+}
+
 /* Icon carrousel */
 
 .scroll {
