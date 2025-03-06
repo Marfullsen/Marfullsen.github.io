@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Slider</title>
+    <style>
+        .slider {
+            position: relative;
+            width: 80%;
+            margin: 50px auto;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .slide {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.5s,
+                        z-index 0s;
+            opacity: 0.6;
+        }
+
+        .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide" data-index="0"><img src="https://picsum.photos/200/200?random=1" alt="1"></div>
+        <div class="slide" data-index="1"><img src="https://picsum.photos/200/200?random=2" alt="2"></div>
+        <div class="slide active" data-index="2"><img src="https://picsum.photos/200/200?random=3" alt="3"></div>
+        <div class="slide" data-index="3"><img src="https://picsum.photos/200/200?random=4" alt="4"></div>
+        <div class="slide" data-index="4"><img src="https://picsum.photos/200/200?random=5" alt="5"></div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let activeIndex = 2;
+
+        slides.forEach(slide => {
+            slide.addEventListener('click', () => {
+                activeIndex = parseInt(slide.dataset.index);
+                updateSlider();
+            });
+        });
+
+        function updateSlider() {
+            const totalSlides = slides.length;
+            const slideWidth = 200;
+            const gap = 20;
+            
+            slides.forEach(slide => {
+                const index = parseInt(slide.dataset.index);
+                const offset = (index - activeIndex) * (slideWidth + gap);
+                
+                slide.style.transform = `
+                    translateX(${offset}px) 
+                    scale(${index === activeIndex ? 1.2 : 1})
+                `;
+                
+                slide.style.zIndex = index === activeIndex ? 2 : 1;
+                slide.style.opacity = index === activeIndex ? 1 : 0.6;
+            });
+        }
+
+        // Initialize slider
+        updateSlider();
+    </script>
+</body>
+</html>
