@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (index === activeIndex) {
                 item.classList.add('active');
                 item.style.zIndex = 10;
+                repo_name.innerHTML = item.getAttribute('titulo')
+                repo_about.innerHTML = item.getAttribute('subtitulo')
             }
         });
     }
