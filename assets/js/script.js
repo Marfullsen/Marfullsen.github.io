@@ -16,7 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let autoPlayInterval = null;
 
     function updateCarousel() {
+        function goToMarfullsenGithubProfile() {
+            window.location.href = 'https://github.com/Marfullsen';
+          }
         items.forEach((item, index) => {
+            item.removeEventListener('click', goToMarfullsenGithubProfile);
             item.classList.remove('active');
             item.style.zIndex = 1;
             let offset = index - activeIndex;
@@ -33,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.style.zIndex = 10;
                 repo_name.innerHTML = item.getAttribute('titulo')
                 repo_about.innerHTML = item.getAttribute('subtitulo')
+                item.onclick = goToMarfullsenGithubProfile;
             }
         });
     }
