@@ -19,7 +19,7 @@
   <main>
     <section class="darkBg">
       <section class="wrapper flex-center container">
-        <article onclick="rotar_frase()" id="catquote" class="hidden non-selectable">Curiosity killed the cat, but satisfaction brought it back to life.</article>
+        <article onclick="rotar_frase()" id="catquote" class="display-none non-selectable">Curiosity killed the cat, but satisfaction brought it back to life.</article>
         <section id="hero" class="windowslike">
           <!-- Barra superior con ícono, título y botones azules -->
             <article class="top-bar">
@@ -75,7 +75,7 @@
             <img src="assets/img/56993209.jpg" alt="profile-picture" width="120" class="circle responsive-img margin-24px">
           <span class="divider width-100"></span>
         </div>
-        <h5 class="center">@Marfullsen</h5>
+        <h5 class="center tooltipped" data-position="bottom" data-tooltip="My Github Profile"><a class="blue-text text-darken-4" href="https://github.com/Marfullsen">@Marfullsen</a></h5>
         <p>Innovation starts with a single idea. As a software developer, I turn those ideas into functional, beautiful, and impactful digital experiences. Let’s connect and create something extraordinary!</p>
       </div>
       <article class="white">
@@ -109,7 +109,9 @@
       </article>
       <!-- Modal Footer -->
       <div class="modal-footer">
-        <a class="modal-close waves-effect waves-green btn-flat white-text">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="modal-close waves-effect waves-green btn-flat white-text">&nbsp;&nbsp;
+          <img id="visitor_counter" class="visitor_counter hidden" src="https://hitwebcounter.com/counter/counter.php?page=7884607&amp;style=0008&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="Contador de visitas" alt="Web counter">
+          &nbsp;&nbsp;</a>
       </div>
     </section>
     <!-- End Modal -->
@@ -218,11 +220,13 @@
         const allElements = document.querySelectorAll('*');
         if (mode == 'normal') {
           mode = 'outlined';
+          visitor_counter.style.visibility = 'visible'
           allElements.forEach(function(element) {
             element.style.outline = '1px solid red';
           });
         } else {
           mode = 'normal';
+          visitor_counter.style.visibility = 'hidden'
           allElements.forEach(function(element) {
               element.style.outline = '';
           });

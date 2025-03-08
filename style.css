@@ -210,8 +210,17 @@ color: #FF5F56;
 color: #db2f2f;
 }
 
-.hidden {
+.display-none {
 display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visitor_counter {
+    position: relative;
+    bottom: -10px;
 }
 
 #catquote {
